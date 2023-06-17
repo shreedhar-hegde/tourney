@@ -1,0 +1,17 @@
+<div class="header">
+    <!-- <div class="homeIcon">
+        <i class="fas fa-home"></i>
+    </div> -->
+
+    <div class="buttonsContainer">
+        <div *ngIf="!loggedIn">
+            <button (click)="onSignUpClick()">SignUp</button>
+        </div>
+        <div *ngIf="!loggedIn">
+            <button (click)="onLoginClick()">Login</button>
+        </div>
+        <div *ngIf="loggedIn">
+            <button (click)="onLogoutClick()">Logout</button>
+        </div>
+    </div>
+</div>

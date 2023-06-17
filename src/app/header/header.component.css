@@ -1,0 +1,18 @@
+.header {
+  height: 10%;
+  background-color: blueviolet;
+}
+
+.buttonsContainer {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 80%;
+}
+
+.fa-home {
+  height: 1vh;
+  width: 2vw;
+}
