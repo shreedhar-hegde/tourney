@@ -1,0 +1,30 @@
+<div class="modal" [ngClass]="{'show': showModal}">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+
+        <div class="profileFormContainer">
+            <h1>Profile</h1>
+            <form enctype="multipart/form-data" method="post" class="form" [formGroup]="profileForm"
+                (ngSubmit)="updateProfile($event)">
+                <div class="formElement">
+                    <label for="">Date of Birth</label>
+                    <input name="" id="" formControlName="dateOfBirth" type="date">
+                </div>
+                <div class="formElement">
+                    <label class="label" for="Place">Place</label>
+                    <input type="text" name="" id="" formControlName="place">
+                </div>
+                <div class="formElement " name="profilePicture">
+                    <label class="label" for="profilePicture">Profile Picture</label>
+                    <input class="profilePictureInput" type="file" name="profilePicture"
+                        (change)="onImageChange($event)">
+                    <img id="blah" height="200px" width="200px" [src]="updatedProfilePic || 'http://placehold.it/200'"
+                        alt="your image" />
+                </div>
+                <div class="updateProfileButtonContainer">
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { AuthService } from './services/auth.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { ProfileComponent } from './profile/profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +21,17 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
     SignupComponent,
     LoginComponent,
     HeaderComponent,
+    ProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    SharedModule,
+    FormsModule,
+  ],
+  exports: [SharedModule],
   providers: [
     AuthService,
     {

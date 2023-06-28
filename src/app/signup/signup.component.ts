@@ -14,12 +14,11 @@ export class SignupComponent implements OnInit {
 
   onSignUp = (event: any) => {
     event.preventDefault();
-    console.log('calling signup');
 
     this.authService
       .signup('testuser', 'shreea@gmail.com', 'testpassword')
       .subscribe((res) => {
-        console.log('res', res);
+        console.log('signup res', res);
       });
   };
 }

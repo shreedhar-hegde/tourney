@@ -1,0 +1,23 @@
+<div class="profileContainer">
+
+    <div class="profile">
+        <div class="profileHead">
+            <div class="dob">{{dob | date:'dd-MM-yyyy'}}</div>
+            <div class="name">{{username}}</div>
+            <div class="dob">{{place}}</div>
+        </div>
+        <div style="display: flex;align-items: center;justify-content: center;padding: 2em;">
+            <img style="width:20%;height:auto;" [src]="updatedProfilePic || 'http://placehold.it/300'" id="blah" alt="">
+        </div>
+        <div class="profileFooter">
+            <div class="edit">
+                <button (click)="openModal()">Update Profile</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<app-modal></app-modal>
+<app-notification></app-notification>

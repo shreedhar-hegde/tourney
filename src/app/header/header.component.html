@@ -11,6 +11,9 @@
             <button (click)="onLoginClick()">Login</button>
         </div>
         <div *ngIf="loggedIn">
+            <h3>{{username}}</h3>
+        </div>
+        <div *ngIf="loggedIn">
             <button (click)="onLogoutClick()">Logout</button>
         </div>
     </div>
